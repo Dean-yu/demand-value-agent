@@ -8,3 +8,9 @@ out/
 build/
 dist/
 .vercel
+
+# 本地 npm 习惯用阿里内网镜像，会把 resolved URL 写成 anpm.alibaba-inc.com，
+# 推到 Vercel/公网 CI 上装不了。统一不版本化 lock，由部署平台用默认 registry 重新解析。
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
